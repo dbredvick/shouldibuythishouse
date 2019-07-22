@@ -3,7 +3,6 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import MuiLink from '@material-ui/core/Link';
-import Link from '../src/Link';
 import TextField from '@material-ui/core/TextField';
 
 export default function Index() {
