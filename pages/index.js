@@ -3,8 +3,8 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import MuiLink from '@material-ui/core/Link';
-import ProTip from '../src/ProTip';
 import Link from '../src/Link';
+import TextField from '@material-ui/core/TextField';
 
 export default function Index() {
   return (
@@ -14,6 +14,14 @@ export default function Index() {
           Should I Buy This House
         </Typography>
       </Box>
+      <TextField
+        id="outlined-zillow"
+        label="Zillow Link"
+        margin="normal"
+        variant="outlined"
+        helperText="Copy and paste your link from Zillow and press Enter"
+        fullWidth
+      />
     </Container>
   );
 }
