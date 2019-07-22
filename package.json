@@ -6,6 +6,9 @@
     "now-build": "next build"
   },
   "dependencies": {
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/styles": "^4.2.1",
+    "clsx": "^1.0.4",
     "next": "^9.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
