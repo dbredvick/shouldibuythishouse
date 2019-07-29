@@ -8,6 +8,6 @@
     }
   ],
   "env": {
-    "ZILLOW_API_KEY": "@ZILLOW_API_KEY"
+    "ZILLOW_API_KEY": "@zillow_api_key"
   }
 }
