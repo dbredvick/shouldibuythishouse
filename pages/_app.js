@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
+import Helmet from 'react-helmet'
 
 class MyApp extends App {
   componentDidMount() {
@@ -19,9 +20,9 @@ class MyApp extends App {
 
     return (
       <Container>
-        <Head>
-          <title>My page</title>
-        </Head>
+        <Helmet>
+          <title>Should I Buy This House? 🏡💸</title>
+        </Helmet>
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />

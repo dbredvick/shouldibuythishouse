@@ -3,7 +3,6 @@ import {
   Box,
   Button,
   Container,
-  Divider,
   TextField,
   Typography,
   Step,
@@ -13,7 +12,7 @@ import {
 } from '@material-ui/core';
 export default function Index() {
   function getSteps() {
-    return ['Enter home information', 'Add financial information', 'Finalize and share'];
+    return ['Enter home details', 'Add financial details', 'Contact info'];
   }
 
   function getStepContent(step) {
@@ -46,6 +45,7 @@ export default function Index() {
           id="outlined-cost"
           label="Home cost"
           margin="normal"
+          type="number"
           variant="outlined"
           helperText="What's the total cost of your home?"
           fullWidth
@@ -58,16 +58,20 @@ export default function Index() {
             helperText="Amount you are putting down. This does not include closing costs."
             fullWidth
           />
+        </>;
+      case 2:
+        return <>
           <TextField
-            id="outlined-taxes"
-            label="Taxes"
+            id="outlined-email"
+            label="Email"
+            type="email"
+            name="email"
+            autoComplete="email"
             margin="normal"
             variant="outlined"
-            helperText="Enter your best guess at local property taxes."
+            helperText="We will email you once the report is ready."
             fullWidth
           /></>;
-      case 2:
-        return `More info to come here.`;
       default:
         return 'Unknown step';
     }
@@ -92,7 +96,10 @@ export default function Index() {
     <Container maxWidth="sm">
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Should I Buy This House?
+          Should I Buy This House? 🏡💸
+        </Typography>
+        <Typography variant="subtitle1">
+          That's a great question! Enter your info below and let's find out. We will email you when we have your calculation finalized.
         </Typography>
       </Box>
       <Stepper activeStep={activeStep} orientation="vertical">
@@ -120,9 +127,10 @@ export default function Index() {
               </div>
             </StepContent>
           </Step>
+
         ))}
       </Stepper>
-
+      {activeStep === 3 && (<Typography variant="body1">Results are on the way! Watch your email 👀  </Typography>)}
 
 
     </Container>
